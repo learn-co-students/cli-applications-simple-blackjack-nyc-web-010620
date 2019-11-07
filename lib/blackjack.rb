@@ -1,3 +1,5 @@
+require "pry"
+
 def welcome
   puts "Welcome to the Blackjack Table"
 end
@@ -34,16 +36,19 @@ def hit?(num)
   prompt_user
   action = get_user_input
   if action == "s"
-    num
   elsif action == "h"
     num += deal_card
     display_card_total(num)
-    num
   else
-    invalid_command
-    prompt_user
-    action = get_user_input
+      invalid_command
+      prompt_user
+      action = get_user_input
+      if action == "h" #will perform action if user enters "h" after an error
+        num += deal_card
+        display_card_total(num)
+      end
   end
+  num
 end
 
 def invalid_command
@@ -57,7 +62,7 @@ end
 def runner
   welcome
   hand = initial_round
-  while hand < 21 do
+  while hand < 22 do
     hand = hit?(hand)
   end
   end_game(hand)
