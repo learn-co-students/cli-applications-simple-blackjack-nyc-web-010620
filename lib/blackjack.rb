@@ -57,17 +57,17 @@ end
 #####################################################
 # get every test to pass before coding runner below #
 #####################################################
-
-def runner
-  welcome
-  card_total = initial_round # first round cards dealt
-  until card_total > 21      # play until the card_total total is less then 21 and do hit
-    card_total = hit?(card_total) # 1: - each loop of the until is a round if its h you add to the card_total if its s you dont add and display the same value
-    display_card_total(card_total)  # after each hit display the card total
-  end
-
-  end_game(card_total)
-end
+#
+# def runner
+#   welcome
+#   card_total = initial_round # first round cards dealt
+#   until card_total > 21      # play until the card_total total is less then 21 and do hit
+#     card_total = hit?(card_total) # 1: - each loop of the until is a round if its h you add to the card_total if its s you dont add and display the same value
+#     display_card_total(card_total)  # after each hit display the card total
+#   end
+#
+#   end_game(card_total)
+# end
 
 # 1: I noticed in another problem that when you area already adding a varible
 #    that was defined localy you dont need to do card_total += hit?(card_total)
@@ -75,3 +75,15 @@ end
 #    reassigning the sum to the variable
 
 # This lab was more less descriptive
+
+def runner
+  welcome
+  card_total = initial_round # first round delt cards
+
+  until card_total > 21
+    card_total = hit?(card_total)
+    display_card_total(card_total)
+  end
+
+  end_game(card_total)
+end
