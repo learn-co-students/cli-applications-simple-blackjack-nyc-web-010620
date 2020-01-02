@@ -1,44 +1,35 @@
 def welcome
-  # code #welcome here
+  puts "Welcome to the Blackjack Table"
 end
 
 def deal_card
-  # code #deal_card here
+ { display_card_total(7) }.to_not raise_error
 end
 
 def display_card_total
-  # code #display_card_total here
+  puts "card total"
 end
 
 def prompt_user
-  # code #prompt_user here
+  puts "user"
 end
 
 def get_user_input
-  # code #get_user_input here
+  puts "get user imput"
 end
 
 def end_game
-  # code #end_game here
+  puts "end game"
 end
 
 def initial_round
-  # code #initial_round here
+  puts "round intial"
 end
 
 def hit?
-  # code hit? here
+  puts "hit?"
 end
 
 def invalid_command
-  # code invalid_command here
+  puts "invalid command"
 end
-
-#####################################################
-# get every test to pass before coding runner below #
-#####################################################
-
-def runner
-  # code runner here
-end
-    
